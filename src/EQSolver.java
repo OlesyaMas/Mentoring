@@ -1,5 +1,5 @@
 
-public class Calculations {
+public class EQSolver {
 
 	public static void main(String[] args) {
 		double a = 1;
