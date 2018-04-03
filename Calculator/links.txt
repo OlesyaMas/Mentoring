@@ -1,0 +1,2 @@
+Java Programming Tutorial Enum (Enumeration)
+https://www.ntu.edu.sg/home/ehchua/programming/java/JavaEnum.html
