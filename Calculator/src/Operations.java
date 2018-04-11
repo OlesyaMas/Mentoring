@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public enum Operations {
 	PLUS("+"),
@@ -12,20 +13,8 @@ public enum Operations {
 	EXIT("q"),
 	UNKNOWN("Unknown");
 
-	private static ArrayList<String> listOperators = new ArrayList<String>();
-	private static ArrayList<String> listMem = new ArrayList<String>();
-	static {
-		listOperators.add(MINUS.getOperation());
-		listOperators.add(PLUS.getOperation());
-		listOperators.add(DIVISION.getOperation());
-		listOperators.add(MULTIPLY.getOperation());
-
-		
-		listMem.add(MPLUS.getOperation());
-		listMem.add(MREAD.getOperation());
-		listMem.add(MMINUS.getOperation());
-	}
-	
+	private static String operators = "+, -, *, /";
+	private static String memOperators = "m+, m-, mr";
 	private String operation;
 
 	private Operations(String operation) {
@@ -64,16 +53,18 @@ public enum Operations {
 	
 	
 	public static boolean isOperator(String operator){
-		return listOperators.contains(operator);
+		return operators.contains(operator);
 	}
 	
 	public static boolean isMem(String mem){
-		return listMem.contains(mem);
+		return memOperators.contains(mem);
 	}
 
 	public static boolean isOperatorResult(String operator){
 		return getCodeOperation(operator).equals(RESULT);
 	}
 
-	//TODO isExit
+	public static boolean isExit(String input) {
+		return (input.equals(Operations.EXIT.getOperation()) ? true : false);
+	}
 }

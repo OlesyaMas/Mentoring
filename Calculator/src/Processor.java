@@ -20,6 +20,18 @@ public class Processor {
         }
     }
 	
+	public double putToMemo(String input, double resultLine, double resultMemory) {	
+		switch (Operations.getMemOperation(input)) {
+	    case MPLUS:
+	    	resultMemory = resultMemory + resultLine;
+	    	break;
+	    case MMINUS:
+	    	resultMemory = resultMemory - resultLine;
+	    	break;
+	    } 
+		return resultMemory;
+	}
+	
 	public static void reset() {
 		num1 = 0;
 		num2 = 0;
