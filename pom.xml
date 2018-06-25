@@ -14,6 +14,7 @@
         <module>dateobserver</module>
         <module>calculator</module>
         <module>SIngleLinkedList</module>
+        <module>regexencoder</module>
     </modules>
 
     <properties>
